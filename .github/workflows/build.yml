@@ -28,7 +28,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: make tests
       run: |
-        make -j2 config=sanitize werror=1 native=1 luau-tests
+        make -j$(nproc) config=sanitize werror=1 native=1 luau-tests
     - name: run tests
       run: |
         ./luau-tests
