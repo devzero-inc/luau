@@ -20,8 +20,8 @@ jobs:
   unix:
     strategy:
       matrix:
-        os: [{name: ubuntu, version: devzero-ubuntu-24.04}, {name: ubuntu, version: devzero-ubuntu-24.04-lab}]
-    name: ${{matrix.os.name}}
+        os: [{name: ubuntu, version: devzero-ubuntu-24.04}, {name: ubuntu, version: devzero-ubuntu-24.04-lab }, {name: ubuntu, version: devzero-ubuntu-24.04-lab-kata-overlayfs }, {name: ubuntu, version: devzero-ubuntu-24.04-sysbox }, {name: ubuntu, version: ubuntu-latest}]
+    name: ${{matrix.os.version}}
     runs-on: ${{matrix.os.version}}
     steps:
     - uses: actions/checkout@v1
