@@ -21,7 +21,7 @@ jobs:
   unix:
     strategy:
       matrix:
-        os: [{name: ubuntu, version: devzero-ubuntu-24.04}, {name: ubuntu, version: devzero-ubuntu-24.04-lab }, {name: ubuntu, version: devzero-ubuntu-24.04-lab-kata-overlayfs }, {name: ubuntu, version: devzero-ubuntu-24.04-sysbox }, {name: ubuntu, version: ubuntu-latest}, { name: ubuntu, version: devzero-ubuntu-24.04-bare-metal}, { name: ubuntu, version: devzero-ubuntu-24.04-bare-metal-xlarge }, { name: ubuntu, version: ubuntu-xl } ]
+        os: [ {name: ubuntu, version: ubuntu-latest}, { name: ubuntu, version: devzero-ubuntu-24.04-bare-metal}, { name: ubuntu, version: devzero-ubuntu-24.04-bare-metal-xlarge }, { name: ubuntu, version: ubuntu-xl } ]
     name: ${{matrix.os.version}}
     runs-on: ${{matrix.os.version}}
     steps:
